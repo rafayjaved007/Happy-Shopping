@@ -1,0 +1,75 @@
+# Define here the models for your scraped items
+#
+# See documentation in:
+# https://docs.scrapy.org/en/latest/topics/items.html
+
+import scrapy
+
+
+class TopSellerItem(scrapy.Item):
+    SKU = scrapy.Field()
+    Title = scrapy.Field()
+    First_Image_Link = scrapy.Field()
+    Express_or_Market = scrapy.Field()
+    BuyBox_Seller_Store_Name = scrapy.Field()
+    BuyBox_Seller_Offer = scrapy.Field()
+    Our_Offer = scrapy.Field()
+    Difference_with_Other_Offer = scrapy.Field()
+    Difference_with_BuyBox_Seller = scrapy.Field()
+    Model_Number = scrapy.Field()
+
+
+class HappyShoppingItem(scrapy.Item):
+    sku = scrapy.Field()
+    name = scrapy.Field()
+    model_number = scrapy.Field()
+    in_stock = scrapy.Field()
+    stock = scrapy.Field()
+    sale_price = scrapy.Field()
+    regular_price = scrapy.Field()
+    category = scrapy.Field()
+    sub_category = scrapy.Field()
+    image_urls = scrapy.Field()
+    rating = scrapy.Field()
+    description = scrapy.Field()
+
+    id = scrapy.Field()
+    type = scrapy.Field()
+    published = scrapy.Field()
+    is_featured = scrapy.Field()
+    visibility_in_catalog = scrapy.Field()
+    short_description = scrapy.Field()
+
+    date_sale_price_starts = scrapy.Field()
+    date_sale_price_ends = scrapy.Field()
+    tax_status = scrapy.Field()
+    tax_class = scrapy.Field()
+    low_stock_amount = scrapy.Field()
+    backorders_allowed = scrapy.Field()
+    sold_individually = scrapy.Field()
+    weight_kg = scrapy.Field()
+    length_cm = scrapy.Field()
+    width_cm = scrapy.Field()
+    height_cm = scrapy.Field()
+    allow_customer_reviews = scrapy.Field()
+    purchase_note = scrapy.Field()
+    tags = scrapy.Field()
+    shipping_class = scrapy.Field()
+    download_limit = scrapy.Field()
+    download_expiry_days = scrapy.Field()
+    parent = scrapy.Field()
+    grouped_products = scrapy.Field()
+    upsells = scrapy.Field()
+    cross_sells = scrapy.Field()
+    External_URL = scrapy.Field()
+    Button_text = scrapy.Field()
+    Position = scrapy.Field()
+    Meta_wp_page_template = scrapy.Field()
+    Meta_bodycenter_use_variation_thumb = scrapy.Field()
+    Meta_slide_template = scrapy.Field()
+    Meta_rs_page_bg_color = scrapy.Field()
+    Attribute_1_name = scrapy.Field()
+    Attribute_1_value = scrapy.Field()
+    Attribute_1_visible = scrapy.Field()
+    Attribute_1_global = scrapy.Field()
+    Attribute_1_default = scrapy.Field()
