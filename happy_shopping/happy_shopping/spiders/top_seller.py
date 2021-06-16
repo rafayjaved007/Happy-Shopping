@@ -4,16 +4,24 @@ from ..items import TopSellerItem
 
 
 class NoonSpider(scrapy.Spider):
-    url = 'https://www.noon.com/uae-en/p-14890'
+    # url = 'https://www.noon.com/uae-en/p-14890'
+
     last_page = 10
     starting_page = 1
     limit = 200
 
+    def __init__(self, url='https://www.noon.com/uae-en/p-14890', *args, **kwargs):
+        super(NoonSpider, self).__init__(*args, **kwargs)
+        self.url = url
+        self.start_urls = [
+            f"{url}?&limit={self.limit}&page={self.starting_page}"
+        ]
+
+
+
     name = "top_seller"
     pre = 'https://www.noon.com/_svc/catalog/api/u/'
-    start_urls = [
-        f"{url}?&limit={limit}&page={starting_page}"
-    ]
+
 
     def parse(self, response):
         for link in response.xpath("//div[contains(@class,'productContainer')]/a/@href").extract():
